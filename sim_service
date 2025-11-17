@@ -1,0 +1,32 @@
+balance = 100
+
+while True:
+    print("\n1. Check Balance")
+    print("2. Recharge")
+    print("3. Buy Internet (50 TK)")
+    print("4. Exit")
+
+    choice = input("Choose: ")
+
+    if choice == "1":
+        print("Balance:", balance)
+
+    elif choice == "2":
+        amount = int(input("Enter amount: "))
+        balance += amount
+        print("Recharged. New Balance:", balance)
+
+    elif choice == "3":
+        if balance >= 50:
+            balance -= 50
+            print("Internet Pack Bought. Balance:", balance)
+        else:
+            print("Not enough balance")
+
+    elif choice == "4":
+        print("Goodbye!")
+        break
+
+    else:
+        print("Wrong choice")
+
